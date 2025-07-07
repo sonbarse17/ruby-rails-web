@@ -32,7 +32,7 @@ end
 
 # Use the following gems for production
 group :production do
-  gem 'pg', '>= 0.18', '< 2.0'
+  # gem 'pg', '>= 0.18', '< 2.0'  # Removed - using SQLite for simplicity
 end
 
 # Other useful gems
