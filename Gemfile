@@ -15,5 +15,8 @@ gem 'importmap-rails'
 # Use SCSS for stylesheets
 gem 'sassc-rails'
 
+# Logger for Rails 7
+gem 'logger'
+
 # Other useful gems
 gem 'bootsnap', require: false
