@@ -1,4 +1,4 @@
-FROM ruby:3.1-slim
+FROM ruby:2.7-slim
 
 WORKDIR /app
 
@@ -9,15 +9,10 @@ RUN apt-get update -qq && apt-get install -y --no-install-recommends \
 
 # Copy and install gems first for better caching
 COPY Gemfile ./
-RUN bundle config set --local deployment 'true' && \
-    bundle config set --local without 'development test' && \
-    bundle install --jobs 4 --retry 3
+RUN bundle install --jobs 4 --retry 3
 
 # Copy application code
 COPY . .
-
-# Precompile assets
-RUN RAILS_ENV=production bundle exec rails assets:precompile
 
 EXPOSE 3000
 

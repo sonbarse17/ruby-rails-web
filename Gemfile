@@ -38,5 +38,6 @@ end
 # Other useful gems
 gem 'devise' # For authentication
 gem 'bootstrap', '~> 5.0.0' # For styling with Bootstrap
+gem 'bootsnap', '>= 1.4.4', require: false
 
 # Add any additional gems below this line
