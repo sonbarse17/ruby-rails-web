@@ -9,7 +9,7 @@ RUN apt-get update -qq && apt-get install -y --no-install-recommends \
 
 # Copy and install gems first for better caching
 COPY Gemfile ./
-RUN bundle install --jobs 4 --retry 3
+RUN gem update --system && bundle install --jobs 4 --retry 3
 
 # Copy application code
 COPY . .
