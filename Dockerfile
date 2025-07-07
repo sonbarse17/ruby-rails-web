@@ -4,7 +4,8 @@ WORKDIR /app
 
 # Install dependencies in single layer
 RUN apt-get update -qq && apt-get install -y --no-install-recommends \
-    build-essential libsqlite3-dev nodejs && \
+    build-essential libsqlite3-dev nodejs libyaml-dev \
+    libffi-dev libssl-dev zlib1g-dev libreadline-dev && \
     rm -rf /var/lib/apt/lists/*
 
 # Copy and install gems first for better caching
