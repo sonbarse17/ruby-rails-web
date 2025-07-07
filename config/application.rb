@@ -6,6 +6,6 @@ Bundler.require(*Rails.groups)
 
 module RubyRailsWeb
   class Application < Rails::Application
-    config.load_defaults 7.0
+    config.load_defaults 6.1
   end
 end
